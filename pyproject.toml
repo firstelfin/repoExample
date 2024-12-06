@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+
+[project]
+
+name = "repoExample"
+version = "0.0.0"
+description = "python repo代码书写格式."
+readme = "README.md"
+requires-python = ">=3.6"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: Apache Software License",
+]
+dependencies = []
+
+# 指定安装的包为repoExample和README.md
+[tool.setuptools]
+packages = { find = { where = ["."], include = ["repoExample", "repoExample.*"], exclude = ["**.__pycache__", "repoExample/__pycache__"] } }
+
+
+#[project.scripts]
+# 命令 = "包名.模块:函数"
+#code-tool = ""
+[project.scripts]  # 定义命令行工具
+infer = "repoExample.infer:infer"
+
