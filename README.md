@@ -8,3 +8,9 @@
    1. 安装工具[可选]：python3 -m pip install --upgrade build
    2. python -m build
    3. pip install dist/repoExample-0.0.0-py3-none-any.whl
+
+
+`.gitignore`忽略注意事项
+
+1. 要注意匹配的格式，如所有的__pycache__文件夹，只需要写 `__pycache__/`即可，不需要写通配符
+2. 正确忽略的文件add不会添加，不会在Untracked files里面出现
