@@ -9,8 +9,13 @@
    2. python -m build
    3. pip install dist/repoExample-0.0.0-py3-none-any.whl
 
-
 `.gitignore`忽略注意事项
 
 1. 要注意匹配的格式，如所有的__pycache__文件夹，只需要写 `__pycache__/`即可，不需要写通配符
 2. 正确忽略的文件add不会添加，不会在Untracked files里面出现
+
+
+`pyproject.toml`重要资源
+
+1. https://setuptools.pypa.io/en/latest/userguide/pyproject_config.html （setuptools关于pyproject.toml介绍）
+2. https://packaging.python.org/en/latest/overview/ （python打包资源页面）

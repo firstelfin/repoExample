@@ -16,10 +16,6 @@ classifiers = [
 ]
 dependencies = []
 
-# 指定安装的包为repoExample和README.md
-[tool.setuptools]
-packages = { find = { where = ["."], include = ["repoExample", "repoExample.*"], exclude = ["**.__pycache__", "repoExample/__pycache__"] } }
-
 
 #[project.scripts]
 # 命令 = "包名.模块:函数"
@@ -27,3 +23,12 @@ packages = { find = { where = ["."], include = ["repoExample", "repoExample.*"],
 [project.scripts]  # 定义命令行工具
 infer = "repoExample.infer:infer"
 
+# 参考链接：https://packaging.python.org/en/latest/overview/
+
+
+# 指定安装的包为repoExample和README.md
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.exclude-package-data]
+mypkg = [".gitattributes", ".gitignore", ".travis.yml", "README.md", "LICENSE", "**.pyc", "__pycache__"]
